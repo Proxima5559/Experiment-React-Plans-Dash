@@ -1,0 +1,83 @@
+
+.plans-dashboard {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.plans-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.plans-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  margin-top: 4px;
+}
+
+.plans-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card {
+  transition: box-shadow 0.15s;
+}
+
+.plan-card:hover {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+}
+
+.tasks-preview {
+  background-color: #f8f9fa;
+}
+
+.section-header {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.primary-tag {
+  background-color: #fff3cd;
+  color: #664d03;
+  border: 1px solid #ffc10740;
+}
+
+.secondary-tag {
+  background-color: #e8f4fd;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+
+.tag-badge {
+  background-color: #f0f0f0;
+  color: #555;
+  border: 1px solid #ddd;
+}
+
+.task-item {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef !important;
+  transition: background-color 0.1s;
+}
+
+.task-item:hover {
+  background-color: #f1f3f5;
+}
+
+.completed-task {
+  text-decoration: line-through;
+  color: #adb5bd;
+}
+
+.optional-badge {
+  background-color: #f0f0f0;
+  color: #999;
+  border: 1px solid #e0e0e0;
+}
