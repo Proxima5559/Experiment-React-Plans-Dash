@@ -59,11 +59,11 @@ const PlanEditor = () => {
       const updatedItem = await api.toggleItem(itemId);
       if (isMandatoryItem) {
         setMandatory((prev) =>
-          prev.map((item) => (item.id === itemId ? updatedItem : item))
+          prev.map((item) => (item._id === itemId ? updatedItem : item))
         );
       } else {
         setSecondary((prev) =>
-          prev.map((item) => (item.id === itemId ? updatedItem : item))
+          prev.map((item) => (item._id === itemId ? updatedItem : item))
         );
       }
     } catch (err) {
@@ -75,9 +75,9 @@ const PlanEditor = () => {
     try {
       await api.deleteItem(itemId);
       if (isMandatoryItem) {
-        setMandatory((prev) => prev.filter((item) => item.id !== itemId));
+        setMandatory((prev) => prev.filter((item) => item._id !== itemId));
       } else {
-        setSecondary((prev) => prev.filter((item) => item.id !== itemId));
+        setSecondary((prev) => prev.filter((item) => item._id !== itemId));
       }
     } catch (err) {
       console.error('Failed to delete item:', err);

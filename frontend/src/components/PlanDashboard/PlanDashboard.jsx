@@ -12,10 +12,8 @@ const PlanDashboard = () => {
   const [userBudgets, setUserBudgets] = useState([]);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    fetchPlans();
-    fetchUserBudgets();
-  }, [selectedBudgetId]);
+  useEffect(() => { fetchUserBudgets(); }, []);
+  useEffect(() => { fetchPlans(); }, [selectedBudgetId]);
 
   const fetchPlans = async (page = 1) => {
     setLoading(true);

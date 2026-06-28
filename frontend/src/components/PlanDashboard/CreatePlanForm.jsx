@@ -9,9 +9,11 @@ const CreatePlanForm = ({ budgets, onSubmit, isLoading }) => {
   });
 
   useEffect(() => {
-    if (budgets.length > 0 && !formData.budgetId) {
-      setFormData((prev) => ({ ...prev, budgetId: budgets[0].id }));
-    }
+    if (budgets.length > 0) {
+      setFormData((prev) =>
+        prev.budgetId ? prev : { ...prev, budgetId: budgets[0]._id }
+    );
+  }
   }, [budgets]);
 
   const handleSubmit = async (e) => {
@@ -46,7 +48,7 @@ const CreatePlanForm = ({ budgets, onSubmit, isLoading }) => {
               required
             >
               {budgets.map((budget) => (
-                <option key={budget.id} value={budget.id}>
+                <option key={budget._id} value={budget._id}>
                   {budget.name}
                 </option>
               ))}

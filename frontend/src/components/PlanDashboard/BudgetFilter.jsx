@@ -6,11 +6,11 @@ const BudgetFilter = ({ budgets, selectedId, onChange }) => {
       className="form-select form-select-sm"
       style={{ width: 'auto', minWidth: '160px' }}
       value={selectedId || ''}
-      onChange={(e) => onChange(e.target.value ? Number(e.target.value) : null)}
+      onChange={(e) => onChange(e.target.value ? e.target.value : null)}
     >
       <option value="">All budgets</option>
       {budgets.map((b) => (
-        <option key={b.id} value={b.id}>
+        <option key={b._id} value={b._id}>
           {b.name}
         </option>
       ))}

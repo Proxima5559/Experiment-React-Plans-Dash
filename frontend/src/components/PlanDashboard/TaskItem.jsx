@@ -7,13 +7,13 @@ const TaskItem = ({ item, onToggle, onDelete }) => {
 
   const handleToggle = async () => {
     setToggling(true);
-    await onToggle(item.id);
+    await onToggle(item._id);
     setToggling(false);
   };
 
   const handleDelete = async () => {
     setDeleting(true);
-    await onDelete(item.id);
+    await onDelete(item._id);
     setDeleting(false);
   };
 

@@ -60,7 +60,7 @@ const PlanCard = ({ plan, onDelete }) => {
             </span>
             {plan.items.slice(0, 3).map((item) => (
               <div
-                key={item.id}
+                key={item._id}
                 className="small fw-medium d-flex align-items-start mb-1"
               >
                 <span className="me-2">•</span>

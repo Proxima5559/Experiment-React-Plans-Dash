@@ -13,7 +13,7 @@ const TaskList = ({ title, items, icon, iconColor, onToggle, onDelete }) => {
       <div className="list-group list-group-flush">
         {items.map((item) => (
           <TaskItem
-            key={item.id}
+            key={item._id}
             item={item}
             onToggle={onToggle}
             onDelete={onDelete}
